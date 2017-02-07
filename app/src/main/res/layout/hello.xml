@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/helloText"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent" />
+<Button
+    android:id="@+id/buttonText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+<Button
+    android:id="@+id/jisuan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="打开计算器"
+    />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingEnd="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingStart="0dp"
+        android:paddingTop="0dp">
+        <TextView
+            android:id="@+id/type"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="type href:" />
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type"
+            android:text="我是输入框"
+            android:textColorLink="@android:color/holo_orange_light" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_below="@id/edit"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ok"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:layout_toLeftOf="@id/ok"
+            android:layout_alignTop="@id/ok"
+            android:visibility="gone"
+            android:id="@+id/cancel"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+
