@@ -40,10 +40,7 @@ public class Hello extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.putExtra("aa","aasdf");
-                intent.setClass(Hello.this,LoginActivity.class);
-                Hello.this.startActivity(intent);
+
             }
         });
         jisuan.setOnClickListener(new View.OnClickListener() {
