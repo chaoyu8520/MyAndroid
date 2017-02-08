@@ -32,7 +32,7 @@ public class wifi extends Activity {
         public void onClick(View v) {
             manager = (WifiManager)wifi.this.getSystemService(Context.WIFI_SERVICE);
             manager.setWifiEnabled(true);
-            Log.e(TAG, "打开wifi state->"+manager.getWifiState());
+            Log.e(TAG, "打开wifi 状态为 state->"+manager.getWifiState());
             Toast.makeText(wifi.this,"当前状态为 "+manager.getWifiState(),Toast.LENGTH_SHORT).show();
         }
     }
