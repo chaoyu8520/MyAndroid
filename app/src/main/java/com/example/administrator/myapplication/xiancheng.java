@@ -38,10 +38,28 @@ public class xiancheng extends Activity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.e(TAG, "handleMessage: "+Thread.currentThread().getId());
+                Log.e(TAG, "handleMessage: "+Thread.currentThread().getName());
+                Log.d(TAG, "开始线程 ");
+                new Thread(){
+                    @Override
+                    public void run() {
+                        Log.e(TAG, "handleMessage: "+Thread.currentThread().getId());
+                        Log.e(TAG, "handleMessage: "+Thread.currentThread().getName());
+                        Message msg = hand.obtainMessage();
+                        msg.arg1 = 111;
+                        hand.sendMessage(msg);
+                    }
+                }.start();
             }
         });
     }
+    final Handler hand = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            Log.d(TAG, "handleMessage: "+msg.arg1);
+        }
+    };
     class ceshiHandler extends Handler{
         public ceshiHandler() {
 
